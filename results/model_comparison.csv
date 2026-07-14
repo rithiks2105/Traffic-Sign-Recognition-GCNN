@@ -1,0 +1,3 @@
+Model,Test Accuracy (%),Macro F1 (%),Weighted F1 (%),Parameters (M),MACs (M),T4 latency (ms/image),Best checkpoint epoch
+Traditional CNN,98.35,97.65,98.35,1.138,301.08,0.769,8
+GCNN,98.16,96.49,98.13,0.705,71.87,2.118,11
