@@ -1,0 +1,44 @@
+TRAFFIC SIGN RECOGNITION USING GCNN — RECORDED EXECUTION RESULTS
+
+Environment
+- Google Colab
+- NVIDIA Tesla T4
+- PyTorch 2.11.0+cu128
+- GTSRB: 43 classes and 12,630 official test images
+- Both models trained for 20 epochs
+
+GCNN
+- Best checkpoint epoch: 11
+- Best validation accuracy: 100.00%
+- Test accuracy: 98.16%
+- Macro precision / recall / F1: 96.83% / 96.52% / 96.49%
+- Weighted precision / recall / F1: 98.23% / 98.16% / 98.13%
+- Parameters: 0.705 M
+- MACs: 71.87 M
+- T4 latency (batch size 1): 2.118 ms/image
+
+Traditional CNN
+- Best checkpoint epoch: 8
+- Best validation accuracy: 100.00%
+- Test accuracy: 98.35%
+- Macro precision / recall / F1: 97.66% / 97.81% / 97.65%
+- Weighted precision / recall / F1: 98.43% / 98.35% / 98.35%
+- Parameters: 1.138 M
+- MACs: 301.08 M
+- T4 latency (batch size 1): 0.769 ms/image
+
+Derived comparison
+- GCNN parameter reduction: approximately 38.05%
+- GCNN MAC reduction: approximately 76.13%
+- Accuracy difference: 0.19 percentage points in favor of CNN
+- The standard CNN was faster on the tested T4 GPU despite higher theoretical computation.
+
+Sample top-3 prediction
+1. End no passing: 94.47%
+2. Speed limit 70: 0.24%
+3. End speed and passing limits: 0.21%
+
+Important
+- This is traffic-sign recognition/classification on cropped sign images.
+- It is not full road-scene object detection.
+- Trained .pth files are excluded from Git because of their size.
