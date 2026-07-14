@@ -1,0 +1,12 @@
+{
+  "data_dir": "data",
+  "output_dir": "outputs",
+  "image_size": 48,
+  "batch_size": 128,
+  "epochs": 20,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "num_workers": 2,
+  "seed": 42,
+  "model": "gcnn"
+}
